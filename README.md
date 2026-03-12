@@ -6,6 +6,8 @@ Give your AI agent a better first move.
 
 If your agent tends to answer too fast, use the wrong framework, or mix diagnosis with recommendations, this skill set fixes that.
 
+The idea for this repository is inspired by [Untools](https://untools.co/), a curated collection of thinking tools and frameworks for problem solving, decision making, systems thinking, and communication.
+
 ## Why install this
 
 - Route vague or messy prompts to the right thinking style
@@ -62,6 +64,19 @@ That makes it especially useful when:
 - the user mixes multiple goals in one prompt
 - the agent tends to skip framing and jump to output
 - you want more reliable, category-appropriate reasoning
+
+## Inspiration
+
+This repository takes direct inspiration from [Untools](https://untools.co/), especially its organization of practical thinking frameworks into four areas:
+
+- communication
+- decision making
+- problem solving
+- systems thinking
+
+This project adapts that mental-model-oriented structure into agent skills, so an AI assistant can choose an appropriate reasoning workflow before producing an answer.
+
+This repository is inspired by Untools, but it is not affiliated with or endorsed by Untools.
 
 ## Project structure
 

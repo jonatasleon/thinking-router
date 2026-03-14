@@ -11,59 +11,75 @@ metadata:
 
 ## What this skill does
 
-Use this skill when the main task is choosing what to do, what to do first, or how to trade off speed, quality, risk, and upside.
+Use this skill when the main task is choosing what to do, what to do first, or how to act under uncertainty.
 
-## When to use it
+This domain covers option comparison, prioritization, consequence analysis, assumption checking, and response style.
 
-Use this when the request is mainly about:
-- comparing options
-- prioritizing tasks or initiatives
-- making a choice under uncertainty
-- reasoning about consequences
-- deciding how fast to move
+## When this domain is appropriate
 
-## When not to use it
+Use it when the user is mainly asking:
 
-Do not use this when the user mainly needs root-cause analysis or system mapping. Use `problem-solving` or `systems-thinking` instead.
+- which option is best
+- what should be prioritized now
+- what kind of decision this is
+- what consequences a decision may create
+- how to move under uncertainty or speed pressure
 
-## Framework selection guide
+Do not use it when the real problem is root-cause diagnosis, system mapping, or message drafting.
 
-- `Decision Matrix` for weighted option comparison.
-- `Impact-Effort Matrix` for prioritization by value versus cost.
-- `Eisenhower Matrix` for urgency versus importance.
-- `Second-order Thinking` for downstream consequences.
-- `OODA Loop` for fast iterative decisions with incomplete information.
-- `Cynefin Framework` for matching response style to context.
-- `Six Thinking Hats` for perspective balancing.
-- `Ladder of Inference` for checking assumptions and conclusions.
-- `Hard Choice Model` for values-based tradeoffs.
-- `Confidence Determines Speed vs. Quality` for execution pacing.
+## Routing logic
 
-Choose the framework that best matches the user's immediate decision, not the most sophisticated one.
+- classify decision type first -> `frameworks/hard-choice-model.md`
+- compare explicit options on shared criteria -> `frameworks/decision-matrix.md`
+- prioritize by impact vs effort -> `frameworks/impact-effort-matrix.md`
+- prioritize by urgency vs importance -> `frameworks/eisenhower-matrix.md`
+- test long-term consequences -> `frameworks/second-order-thinking.md`
+- check whether conclusions are over-interpreted -> `frameworks/ladder-of-inference.md`
+- force perspective balance -> `frameworks/six-thinking-hats.md`
+- decide iteratively in a fast-changing context -> `frameworks/ooda-loop.md`
+- match response style to context type -> `frameworks/cynefin-framework.md`
+- set the right speed/quality posture -> `frameworks/confidence-determines-speed-vs-quality.md`
 
-## Working method
+## Framework chaining
 
-1. State the decision to be made.
-2. Name the options if present. If not, infer reasonable options or ask only when necessary.
-3. Choose the best-fit framework.
-4. Explain why it fits.
-5. Apply it step by step.
-6. Give a clear recommendation, tradeoff summary, and next action.
+- `hard-choice-model.md` -> `decision-matrix.md` when options are comparable and high impact
+- `decision-matrix.md` -> `second-order-thinking.md` to stress-test the leading option
+- `ladder-of-inference.md` -> any recommendation when assumptions seem fragile
+- `cynefin-framework.md` -> `ooda-loop.md` when the context is complex or chaotic
+- `confidence-determines-speed-vs-quality.md` after a choice to set execution pace
 
-## Output format
+## Execution policy
+
+Before applying a framework:
+
+1. State the decision clearly.
+2. Name the options if present.
+3. Separate facts from assumptions.
+4. Choose the minimum framework or sequence needed.
+5. Follow the selected framework file's process exactly.
+6. End with a recommendation, tradeoff summary, and next action.
+
+## Output contract
 
 - `Goal:`
 - `Chosen framework:`
 - `Why this framework:`
-- `Inputs / assumptions:`
-- `Step-by-step application:`
-- `Result:`
+- `Known facts:`
+- `Assumptions:`
+- `Reasoning:`
+- `Recommendation:`
+- `Tradeoffs:`
 - `Recommended next action:`
 
-Prefer a usable recommendation over an exhaustive analysis dump.
+## Framework references
 
-## Example triggers
-
-- Compare these roadmap options and recommend one.
-- Help me prioritize these initiatives.
-- What is the best way to trade off speed and confidence here?
+- `frameworks/six-thinking-hats.md`
+- `frameworks/eisenhower-matrix.md`
+- `frameworks/second-order-thinking.md`
+- `frameworks/decision-matrix.md`
+- `frameworks/impact-effort-matrix.md`
+- `frameworks/ladder-of-inference.md`
+- `frameworks/hard-choice-model.md`
+- `frameworks/ooda-loop.md`
+- `frameworks/cynefin-framework.md`
+- `frameworks/confidence-determines-speed-vs-quality.md`

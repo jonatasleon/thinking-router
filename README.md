@@ -39,8 +39,9 @@ Repository: `git@github.com:jonatasleon/thinking-router.git`
 1. Start with `thinking-router`
 2. Identify the user's true goal
 3. Route to one primary reasoning category
-4. Apply the specialized skill
-5. Return a clearer, more useful answer
+4. Propose the most likely framework or short framework sequence
+5. Apply the specialized skill and its framework protocol
+6. Return a clearer, more useful answer
 
 This gives your agent a reasoning layer before it commits to an output.
 
@@ -78,23 +79,76 @@ This project adapts that mental-model-oriented structure into agent skills, so a
 
 This repository is inspired by Untools, but it is not affiliated with or endorsed by Untools.
 
+## Framework architecture
+
+This repository now separates domain routing from framework execution.
+
+- Each top-level skill explains when that domain is appropriate.
+- Each domain skill contains routing logic that points to specific framework files.
+- Each framework lives in its own file and is written as an operational reasoning protocol, not just a description.
+- `thinking-router` can recommend a short framework sequence when one framework alone is not enough.
+
+Every framework file follows the same core structure:
+
+- framework name
+- core mental model
+- when to use
+- when not to use
+- key diagnostic questions
+- step-by-step reasoning process
+- example application
+
+That makes the framework library more composable, easier to extend, and much more explicit for LLM reasoning.
+
 ## Project structure
 
 ```text
 .
 |-- communication/
+|   |-- frameworks/
+|   |   |-- minto-pyramid.md
+|   |   `-- situation-behavior-impact.md
 |   `-- SKILL.md
 |-- decision-making/
+|   |-- frameworks/
+|   |   |-- confidence-determines-speed-vs-quality.md
+|   |   |-- cynefin-framework.md
+|   |   |-- decision-matrix.md
+|   |   |-- eisenhower-matrix.md
+|   |   |-- hard-choice-model.md
+|   |   |-- impact-effort-matrix.md
+|   |   |-- ladder-of-inference.md
+|   |   |-- ooda-loop.md
+|   |   |-- second-order-thinking.md
+|   |   `-- six-thinking-hats.md
 |   `-- SKILL.md
 |-- problem-solving/
+|   |-- frameworks/
+|   |   |-- abstraction-laddering.md
+|   |   |-- conflict-resolution-diagram.md
+|   |   |-- first-principles.md
+|   |   |-- inversion.md
+|   |   |-- ishikawa-diagram.md
+|   |   |-- issue-trees.md
+|   |   |-- productive-thinking-model.md
+|   |   `-- zwicky-box.md
 |   `-- SKILL.md
 |-- systems-thinking/
+|   |-- frameworks/
+|   |   |-- balancing-feedback-loop.md
+|   |   |-- concept-map.md
+|   |   |-- connection-circles.md
+|   |   |-- iceberg-model.md
+|   |   `-- reinforcing-feedback-loop.md
 |   `-- SKILL.md
+|-- thinking-router-analysis.md
 `-- thinking-router/
     `-- SKILL.md
 ```
 
-Each skill lives in its own directory and is defined as a single `SKILL.md` file with frontmatter and instructions.
+Each domain still has one `SKILL.md`, but the actual framework procedures now live in `frameworks/` so they can be referenced, extended, and composed more cleanly.
+
+The analysis and redesign rationale is documented in `thinking-router-analysis.md`.
 
 ## Built for
 

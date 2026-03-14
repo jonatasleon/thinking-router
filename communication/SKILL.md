@@ -11,51 +11,57 @@ metadata:
 
 ## What this skill does
 
-Use this skill to turn thinking into communication that is clear, practical, and easy to act on.
+Use this skill to convert reasoning into communication that is clear, concise, and actionable.
 
-## When to use it
+This domain is both a primary domain for message drafting and a downstream packaging layer for outputs from systems thinking, decision making, and problem solving.
 
-Use this when the request is mainly about:
-- delivering behavioral feedback
-- summarizing analysis for a stakeholder
-- presenting a recommendation clearly
-- structuring a message for fast understanding
+## When this domain is appropriate
 
-## When not to use it
+Use it when the user is mainly asking:
 
-Do not use this when the main need is system analysis, option comparison, or root-cause diagnosis. Use the corresponding category skill first, then use this skill to package the result.
+- how to give feedback to a person
+- how to summarize analysis for a stakeholder
+- how to turn a recommendation into a clear memo or update
+- how to structure a message for fast understanding
 
-## Framework selection guide
+Do not use it as the primary tool when the real need is diagnosing the problem or making the decision itself.
 
-- `Situation-Behavior-Impact` for feedback about observable actions and their effects.
-- `Minto Pyramid` for top-down communication where the main point should come first.
+## Routing logic
 
-Choose `Situation-Behavior-Impact` for interpersonal feedback and `Minto Pyramid` for summaries, updates, and argument structure.
+- feedback on observable behavior -> `frameworks/situation-behavior-impact.md`
+- conclusion-first memo, update, or recommendation -> `frameworks/minto-pyramid.md`
 
-## Working method
+## Domain handoffs
 
-1. Identify the audience and communication goal.
-2. Choose the best-fit framework.
-3. Explain why it fits.
-4. Apply it step by step.
-5. Produce the final message in a usable format.
+Use this skill after another domain when the reasoning exists but the message is weak.
 
-Ask a clarifying question only if the audience, tone, or objective is missing and that prevents a useful draft.
+- systems-thinking -> `minto-pyramid.md` for system insight summaries
+- decision-making -> `minto-pyramid.md` for recommendations and tradeoff briefs
+- problem-solving -> `minto-pyramid.md` for proposed solution summaries
+- interpersonal issue identified elsewhere -> `situation-behavior-impact.md`
 
-## Output format
+## Execution policy
+
+Before applying a framework:
+
+1. Identify audience, objective, and tone.
+2. Confirm whether the message is feedback or synthesis.
+3. Separate observed facts from interpretation.
+4. Follow the selected framework file's process exactly.
+5. End with copy-ready language when possible.
+
+## Output contract
 
 - `Goal:`
 - `Chosen framework:`
 - `Why this framework:`
-- `Inputs / assumptions:`
-- `Step-by-step application:`
-- `Result:`
+- `Audience:`
+- `Inputs:`
+- `Reasoning:`
+- `Final message:`
 - `Recommended next action:`
 
-Prefer copy-ready output when possible.
+## Framework references
 
-## Example triggers
-
-- Help me give this feedback without sounding accusatory.
-- Turn this analysis into a concise executive update.
-- Rewrite this recommendation so it is easier to understand.
+- `frameworks/situation-behavior-impact.md`
+- `frameworks/minto-pyramid.md`

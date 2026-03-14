@@ -11,58 +11,64 @@ metadata:
 
 ## What this skill does
 
-Use this skill to understand why a system behaves the way it does.
+Use this skill to explain why a system behaves the way it does.
 
-Focus on recurring patterns, hidden structures, relationships, and feedback loops instead of only visible events.
+This domain is for recurring patterns, hidden structures, relationships, and feedback loops. It is not for choosing between options or drafting the final message.
 
-## When to use it
+## When this domain is appropriate
 
-Use this when the request is mainly about:
-- recurring patterns over time
-- hidden causes behind visible events
-- relationships between actors, forces, or components
-- stabilizing or self-correcting dynamics
-- compounding or runaway dynamics
+Use it when the user is mainly asking:
 
-## When not to use it
+- why something keeps happening
+- how a system works
+- what relationships drive the outcome
+- whether a loop is stabilizing or compounding
 
-Do not use this when the main task is choosing between explicit options, prioritizing work, or drafting a message for someone else. In those cases use `decision-making` or `communication`.
+Do not use it when the main task is prioritization, recommendation between options, or interpersonal messaging.
 
-## Framework selection guide
+## Routing logic
 
-- Use `Iceberg Model` for event -> pattern -> structure -> mental model analysis.
-- Use `Connection Circles` to map relationships and surface loops.
-- Use `Concept Map` to organize entities and dependencies.
-- Use `Balancing Feedback Loop` for self-correcting or stabilizing behavior.
-- Use `Reinforcing Feedback Loop` for compounding or runaway behavior.
+Choose the framework that matches the user's immediate need:
 
-Choose one best-fit framework unless the request clearly needs a follow-up framing step.
+- recurring event with hidden causes -> `frameworks/iceberg-model.md`
+- multiple interacting elements and causal links -> `frameworks/connection-circles.md`
+- relationship or dependency mapping without loop focus -> `frameworks/concept-map.md`
+- self-correcting or stabilizing dynamics -> `frameworks/balancing-feedback-loop.md`
+- compounding or runaway dynamics -> `frameworks/reinforcing-feedback-loop.md`
 
-## Working method
+## Framework chaining
 
-1. State the system or behavior being examined.
-2. Choose the best-fit framework.
-3. Explain why that framework fits.
-4. Apply it step by step.
-5. Surface the key system insight.
-6. Recommend the next practical intervention or question.
+Use more than one framework when the reasoning benefits from a sequence:
 
-Ask a clarifying question only if the system boundary or observed behavior is too vague to analyze usefully.
+- `connection-circles.md` -> `balancing-feedback-loop.md` or `reinforcing-feedback-loop.md` to classify discovered loops
+- `iceberg-model.md` -> `connection-circles.md` to move from deeper diagnosis to relationship mapping
+- `connection-circles.md` -> `iceberg-model.md` to explain why a mapped loop exists
 
-## Output format
+## Execution policy
+
+Before applying a framework:
+
+1. State the system boundary.
+2. Separate facts from assumptions.
+3. Choose one framework or a short sequence.
+4. Follow the selected framework file's process exactly.
+5. End with the highest-leverage intervention or next question.
+
+## Output contract
 
 - `Goal:`
 - `Chosen framework:`
 - `Why this framework:`
-- `Inputs / assumptions:`
-- `Step-by-step application:`
-- `Result:`
+- `Known facts:`
+- `Assumptions:`
+- `Reasoning:`
+- `System insight:`
 - `Recommended next action:`
 
-Prefer practical interventions over abstract commentary.
+## Framework references
 
-## Example triggers
-
-- Why does this problem keep coming back after every fix?
-- Map the feedback loops in our onboarding system.
-- Help me understand the hidden structure behind this recurring issue.
+- `frameworks/iceberg-model.md`
+- `frameworks/connection-circles.md`
+- `frameworks/concept-map.md`
+- `frameworks/balancing-feedback-loop.md`
+- `frameworks/reinforcing-feedback-loop.md`

@@ -13,56 +13,66 @@ metadata:
 
 Use this skill when the main task is understanding a problem deeply enough to solve it well.
 
-## When to use it
+This domain covers decomposition, root causes, reframing, creative generation, and structured convergence on a solution path.
 
-Use this when the request is mainly about:
-- root causes
-- breaking a big problem into smaller parts
-- generating or testing solution paths
-- resolving opposing constraints
-- reframing a stuck problem
+## When this domain is appropriate
 
-## When not to use it
+Use it when the user is mainly asking:
 
-Do not use this when the user already has clear options and only needs a recommendation, or when the main need is message framing. Use `decision-making` or `communication` instead.
+- what is causing the problem
+- how to break the problem down
+- whether this is the right problem to solve
+- how to generate better solution paths
+- how to resolve conflicting constraints
 
-## Framework selection guide
+Do not use it when the user already has clear options and mainly needs a recommendation or a message.
 
-- `Ishikawa Diagram` for root-cause analysis.
-- `Issue Trees` for decomposition.
-- `First Principles` for rebuilding from fundamentals.
-- `Inversion` for identifying failure paths and avoidance tactics.
-- `Zwicky Box` for structured idea generation.
-- `Conflict Resolution Diagram` for conflicting constraints.
-- `Abstraction Laddering` for reframing at different levels.
-- `Productive Thinking Model` for end-to-end problem exploration.
+## Routing logic
 
-Choose the framework that best reduces ambiguity and increases practical progress.
+- root-cause analysis by categories -> `frameworks/ishikawa-diagram.md`
+- decompose a broad problem -> `frameworks/issue-trees.md`
+- reframe at higher or lower abstraction -> `frameworks/abstraction-laddering.md`
+- rebuild from fundamentals -> `frameworks/first-principles.md`
+- identify failure paths and safeguards -> `frameworks/inversion.md`
+- generate systematic solution combinations -> `frameworks/zwicky-box.md`
+- resolve opposing constraints -> `frameworks/conflict-resolution-diagram.md`
+- run end-to-end creative problem solving -> `frameworks/productive-thinking-model.md`
 
-## Working method
+## Framework chaining
 
-1. Define the problem clearly.
-2. Choose the best-fit framework.
-3. Explain why it fits.
-4. Apply it step by step.
-5. Conclude with the most actionable insight, solution path, or experiment.
+- `issue-trees.md` -> `ishikawa-diagram.md` when one branch needs root-cause depth
+- `abstraction-laddering.md` -> `first-principles.md` when the framing itself is limiting
+- `inversion.md` -> `zwicky-box.md` when you need both risk avoidance and creative generation
+- `issue-trees.md` -> `productive-thinking-model.md` when a defined branch is ready for solution development
 
-Ask a clarifying question only if the problem statement is too vague to identify a useful target.
+## Execution policy
 
-## Output format
+Before applying a framework:
+
+1. Write the problem in one sentence.
+2. Separate known facts from assumptions.
+3. Choose the framework that best reduces ambiguity.
+4. Follow the selected framework file's process exactly.
+5. End with the clearest next investigation, experiment, or solution path.
+
+## Output contract
 
 - `Goal:`
 - `Chosen framework:`
 - `Why this framework:`
-- `Inputs / assumptions:`
-- `Step-by-step application:`
+- `Known facts:`
+- `Assumptions:`
+- `Reasoning:`
 - `Result:`
 - `Recommended next action:`
 
-Prefer practical progress over academic completeness.
+## Framework references
 
-## Example triggers
-
-- Find the root cause behind repeated missed deadlines.
-- Break down why activation has stalled.
-- Help me solve this messy problem step by step.
+- `frameworks/ishikawa-diagram.md`
+- `frameworks/abstraction-laddering.md`
+- `frameworks/conflict-resolution-diagram.md`
+- `frameworks/zwicky-box.md`
+- `frameworks/productive-thinking-model.md`
+- `frameworks/inversion.md`
+- `frameworks/issue-trees.md`
+- `frameworks/first-principles.md`
